@@ -5,7 +5,7 @@ class Modal extends Component {
     //Podria ser un functional component
     //Nos aseguramos que solo haga re-render si hay un cambio en el estado
     shouldComponentUpdate(nextProps,nextState){
-        return nextProps.show !== this.props.show; 
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children; 
     }
     componentWillUpdate(){
         console.log("Modal will update");
